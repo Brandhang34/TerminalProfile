@@ -43,8 +43,6 @@ Install [ZSH](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
 ./install_zsh.sh
 ```
 
-Add the rest of the installation scripts
-
 ## 💤 LazyVim
 
 I use [LazyVim](https://github.com/LazyVim/LazyVim) as my NeoVim configuration ([One Dark Pro Themed](https://github.com/olimorris/onedarkpro.nvim)).
