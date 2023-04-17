@@ -10,12 +10,9 @@ set -eux pipefail
 # Replace the configs with the saved one.
 sudo cp configs/.zshrc ~/.zshrc
 
-# Copy the zsh theme
+# Copy the p10k zsh theme
 
-########################################################################
-################################ COPY COMMAND ##########################
-# sudo cp configs/
-########################################################################
+sudo cp configs/.p10k.zsh ~/.p10k.zsh
 
 
 dconf load /org/gnome/terminal/legacy/profiles:/:b3813e36-f781-4b57-a2f1-68502fe0fdd7/ < Terminal_Profile/configs/terminal_profile.dconf
