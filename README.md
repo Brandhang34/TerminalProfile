@@ -82,4 +82,4 @@ cp -r lazyvim_configs/* ~/.config/nvim
 
 Links to some of the resources I used:
 
-[Oh My Zsh!](https://medium.com/wearetheledger/oh-my-zsh-made-for-cli-lovers-installation-guide-3131ca5491fb) | [Robby Russel OMZ](https://github.com/robbyrussell/oh-my-zsh) | [NeoVim V0.9.0](https://github.com/neovim/neovim/releases/tag/v0.9.0) | [LazyVim Documentation](https://lazyvim.github.io/installation)
+[Oh My Zsh!](https://medium.com/wearetheledger/oh-my-zsh-made-for-cli-lovers-installation-guide-3131ca5491fb) | [NeoVim V0.9.0](https://github.com/neovim/neovim/releases/tag/v0.9.0) | [LazyVim Documentation](https://lazyvim.github.io/installation) | [logo-ls](https://github.com/Yash-Handa/logo-ls) | [One Dark Pro](https://github.com/olimorris/onedarkpro.nvim) | [Nerd Font](https://www.nerdfonts.com/)
