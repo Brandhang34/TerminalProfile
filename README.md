@@ -1,6 +1,9 @@
 # Sushamae Terminal Profile
 
-![Terminal NeoFetch](README_IMGs/TerminalProfile.png)
+<!-- ![Terminal NeoFetch](README_IMGs/TerminalProfile.png) -->
+<p align="center">
+  <img src="README_IMGs/TerminalProfile.png" />
+</p>
 
 This is the current profile I use for my UNIX terminals. I have only used this on the default Ubuntu terminal.
 
@@ -46,8 +49,13 @@ Add the rest of the installation scripts
 
 I use [LazyVim](https://github.com/LazyVim/LazyVim) as my NeoVim configuration ([One Dark Pro Themed](https://github.com/olimorris/onedarkpro.nvim)).
 
-![LazyVimDefaultPage](README_IMGs/LazyVimDefaultPage.png)
-![LazyVimSample](README_IMGs/LazyVimSample.png)
+<!-- ![LazyVimDefaultPage](README_IMGs/LazyVimDefaultPage.png) -->
+<!-- ![LazyVimSample](README_IMGs/LazyVimSample.png) -->
+
+<p align="center">
+  <img src="README_IMGs/LazyVimDefaultPage.png" />
+  <img src="README_IMGs/LazyVimSample.png" />
+</p>
 
 If you want to don't use my configurations, you can skip this.
 
