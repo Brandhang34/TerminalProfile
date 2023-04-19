@@ -9,7 +9,7 @@ This is the current profile I use for my UNIX terminals. I have only used this o
 
 ## Prerequisites
 
-Before using the scripts, I typically like to update, upgrade and install the necessary software (git and neovim).
+Before using the scripts, I typically like to update, upgrade and install the necessary software.
 
 ```bash
 # Update your software repositories.
@@ -18,29 +18,20 @@ sudo apt-get upgrade -y
 
 # Install Git.
 sudo apt-get install -y git
-
-# Install NeoVim v9.0
-chmod u+x extras/nvim.appimage && ./extras/nvim.appimage
 ```
 
 ## Installation
 
-Install [logo-ls](https://github.com/Yash-Handa/logo-ls) (Icons in terminal):
+Install NeoVim, [logo-ls](https://github.com/Yash-Handa/logo-ls) latest, [Nerd Font](https://www.nerdfonts.com/) (HackFont), and [ZSH](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH):
 
 ```bash
-cp extras/logo-ls /usr/local/bin
+./install_extras.sh
 ```
 
-Install a [Nerd Font](https://www.nerdfonts.com/) (HackFont):
+Install Terminal Profile
 
 ```bash
-./install_fonts.sh
-```
-
-Install [ZSH](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
-
-```bash
-./install_zsh.sh
+./install_terminal_profile.sh
 ```
 
 ## 💤 LazyVim
