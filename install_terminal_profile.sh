@@ -13,7 +13,7 @@ sudo cp extras/Terminal_Profile/configs/.zshrc ~/
 # Copy the p10k zsh theme
 sudo cp -r extras/Terminal_Profile/powerlevel10k $HOME/.oh-my-zsh/custom/themes/
 
-dconf load /org/gnome/terminal/legacy/profiles:/:b3813e36-f781-4b57-a2f1-68502fe0fdd7/ <Terminal_Profile/configs/terminal_profile.dconf
+dconf load /org/gnome/terminal/legacy/profiles:/:b3813e36-f781-4b57-a2f1-68502fe0fdd7/ <extras/Terminal_Profile/configs/terminal_profile.dconf
 
 add_list_id=b3813e36-f781-4b57-a2f1-68502fe0fdd7
 old_list=$(dconf read /org/gnome/terminal/legacy/profiles:/list | tr -d "]")
