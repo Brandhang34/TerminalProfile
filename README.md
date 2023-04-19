@@ -71,7 +71,8 @@ Copy files to the nvim directory.
 
 ```bash
 # Copy NeoVim Configurations
-cp -r lazyvim_configs/* ~/.config/nvim
+mkdir ~/.config/nvim
+cp -r extras/nvim/* ~/.config/nvim
 ```
 
 ## Source/References
