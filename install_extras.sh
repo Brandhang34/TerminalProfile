@@ -3,6 +3,8 @@
 # Fail on any command.
 set -eux pipefail
 
+sudo apt-get install curl
+
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
 
@@ -13,7 +15,7 @@ sudo mv squashfs-root /
 sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
 
 #Install Logo-ls
-cp extras/logo-ls /usr/local/bin
+sudo cp extras/logo-ls /usr/local/bin
 
 # Add fonts
 font_dir="$HOME/.local/share/fonts"
@@ -21,7 +23,7 @@ sudo mkdir -p $font_dir
 
 # Copy all fonts to user fonts directory
 echo "Copying fonts..."
-sudo cp -r Terminal_Profile/fonts/hackfonts/* $font_dir
+sudo cp -r extras/Terminal_Profile/fonts/hackfonts/* $font_dir
 
 # Reset font cache on Linux
 if which fc-cache >/dev/null 2>&1; then
