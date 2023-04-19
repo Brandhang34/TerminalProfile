@@ -18,6 +18,9 @@ sudo apt-get upgrade -y
 
 # Install Git.
 sudo apt-get install -y git
+
+# Clone Repository
+git clone https://github.com/Brandhang34/dotfiles.git && cd dotfiles
 ```
 
 ## Installation
@@ -33,6 +36,8 @@ Install Terminal Profile
 ```bash
 ./install_terminal_profile.sh
 ```
+
+Note: Re-login after running the scripts so P10k can be configured and installation takes affect.
 
 ## 💤 LazyVim
 
