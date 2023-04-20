@@ -7,6 +7,12 @@
 
 This is the current profile I use for my UNIX terminals. I have only used this on the default Ubuntu terminal.
 
+### If you dont want to read through, here is an all in one command
+
+```bash
+sudo apt-get install git -y && git clone https://github.com/Brandhang34/TerminalProfile.git && cd TerminalProfile && ./install_extras.sh && ./install_terminal_profile.sh
+```
+
 ## Prerequisites
 
 Before using the scripts, I typically like to update, upgrade and install the necessary software.
@@ -20,7 +26,7 @@ sudo apt-get upgrade -y
 sudo apt-get install -y git
 
 # Clone Repository
-git clone https://github.com/Brandhang34/dotfiles.git && cd dotfiles
+git clone https://github.com/Brandhang34/TerminalProfile.git && cd TerminalProfile
 ```
 
 ## Installation
