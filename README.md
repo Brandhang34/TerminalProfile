@@ -5,7 +5,7 @@
   <img src="README_IMGs/TerminalProfile.png" />
 </p>
 
-This is the current profile I use for my UNIX terminals. I have only used this on the default Ubuntu terminal.
+This is the current profile I use for my UNIX terminals. The terminal emulator I am currently using is kitty terminal on an Ubuntu system.
 
 ### If you dont want to read through, here is an all in one command
 
@@ -24,6 +24,10 @@ sudo apt-get upgrade -y
 
 # Install Git.
 sudo apt-get install -y git
+
+# Install Kitty Terminal and set it as the default terminal profile
+sudo apt install kitty -y
+sudo update-alternatives --set x-terminal-emulator /usr/bin/kitty
 
 # Clone Repository
 git clone https://github.com/Brandhang34/TerminalProfile.git && cd TerminalProfile
