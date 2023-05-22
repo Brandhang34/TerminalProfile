@@ -7,8 +7,14 @@ set -eux pipefail
 sudo apt-get update
 sudo apt-get upgrade -y
 
+# Install Kitty Terminal and set it as the default terminal profile
+sudo apt install kitty -y
+sudo update-alternatives --set x-terminal-emulator /usr/bin/kitty
+
+# Install Curl
 sudo apt-get install curl
 
+# Install NeoVim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
 
@@ -54,20 +60,23 @@ sudo cp -r extras/Terminal_Profile/p10k/* $HOME/.oh-my-zsh/custom/themes/powerle
 
 sudo cp extras/Terminal_Profile/.p10k.zsh ~/
 
-dconf load /org/gnome/terminal/legacy/profiles:/:b3813e36-f781-4b57-a2f1-68502fe0fdd7/ <extras/Terminal_Profile/configs/terminal_profile.dconf
+# Load Kitty Terminal Profile
+cp extras/Terminal_Profile/configs/kitty.conf ~/.config/kitty/kitty.conf
 
-add_list_id=b3813e36-f781-4b57-a2f1-68502fe0fdd7
-old_list=$(dconf read /org/gnome/terminal/legacy/profiles:/list | tr -d "]")
+# dconf load /org/gnome/terminal/legacy/profiles:/:b3813e36-f781-4b57-a2f1-68502fe0fdd7/ <extras/Terminal_Profile/configs/terminal_profile.dconf
 
-if [ -z "$old_list" ]; then
-	front_list="["
-else
-	front_list="$old_list, "
-fi
+# add_list_id=b3813e36-f781-4b57-a2f1-68502fe0fdd7
+# old_list=$(dconf read /org/gnome/terminal/legacy/profiles:/list | tr -d "]")
 
-new_list="$front_list'$add_list_id']"
-dconf write /org/gnome/terminal/legacy/profiles:/list "$new_list"
-dconf write /org/gnome/terminal/legacy/profiles:/default "'$add_list_id'"
+# if [ -z "$old_list" ]; then
+# 	front_list="["
+# else
+# 	front_list="$old_list, "
+# fi
+
+# new_list="$front_list'$add_list_id']"
+# dconf write /org/gnome/terminal/legacy/profiles:/list "$new_list"
+# dconf write /org/gnome/terminal/legacy/profiles:/default "'$add_list_id'"
 
 # Switch the shell.
 chsh -s $(which zsh)
