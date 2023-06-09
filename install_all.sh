@@ -24,6 +24,9 @@ chmod u+x nvim.appimage
 sudo mv squashfs-root /
 sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
 
+# NeoVim extras:
+sudo apt install ripgrep # live grep
+
 #Install Logo-ls
 sudo cp extras/logo-ls /usr/local/bin
 
