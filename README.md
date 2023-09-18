@@ -5,13 +5,7 @@
   <img src="README_IMGs/TerminalProfile.png" />
 </p>
 
-This is the current profile I use for my UNIX terminals. The terminal emulator I am currently using is kitty terminal on an Ubuntu system.
-
-### If you dont want to read through, here is an all in one command
-
-```bash
-sudo apt-get install git -y && git clone https://github.com/Brandhang34/TerminalProfile.git && cd TerminalProfile && ./install_extras.sh && ./install_terminal_profile.sh
-```
+This is the current profile I use for my UNIX terminals. The terminal emulator I am currently using is kitty terminal and starship.
 
 ## Prerequisites
 
@@ -21,33 +15,10 @@ Before using the scripts, I typically like to update, upgrade and install the ne
 # Update your software repositories.
 sudo apt-get update
 sudo apt-get upgrade -y
-
-# Install Git.
-sudo apt-get install -y git
-
-# Install Kitty Terminal and set it as the default terminal profile
-sudo apt install kitty -y
-sudo update-alternatives --set x-terminal-emulator /usr/bin/kitty
-
-# Clone Repository
-git clone https://github.com/Brandhang34/TerminalProfile.git && cd TerminalProfile
 ```
 
 ## Installation
-
-Install NeoVim, [logo-ls](https://github.com/Yash-Handa/logo-ls) latest, [Nerd Font](https://www.nerdfonts.com/) (HackFont), and [ZSH](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH):
-
-```bash
-./install_extras.sh
-```
-
-Install Terminal Profile
-
-```bash
-./install_terminal_profile.sh
-```
-
-Note: Re-login after running the scripts so P10k can be configured and installation takes affect.
+sudo ./install.sh
 
 ## 💤 LazyVim
 
