@@ -17,7 +17,7 @@ sudo apt-get install npm
 # Install tmux
 sudo apt-get install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-mkdir ~/.config/tmux/
+mkdir -p ~/.config/tmux/
 sudo cp extras/Terminal_Profile/configs/tmux/tmux.conf ~/.config/tmux/
 /bin/bash ~/.tmux/plugins/tpm/scripts/update_plugin.sh
 
