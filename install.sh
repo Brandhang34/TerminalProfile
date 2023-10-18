@@ -80,5 +80,5 @@ curl -sS https://starship.rs/install.sh | sh
 sudo cp extras/Terminal_Profile/configs/starship.toml ~/.config
 
 # Copy NeoVim Configurations
-mkdir ~/.config/nvim
+mkdir -p ~/.config/nvim
 cp -r extras/nvim/* ~/.config/nvim
