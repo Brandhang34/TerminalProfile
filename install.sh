@@ -37,8 +37,8 @@ cd $CURRENT_DIR
 # NeoVim extras:
 sudo apt install ripgrep # live grep
 
-#Install Logo-ls
-sudo cp extras/logo-ls /usr/local/bin
+#Install exa
+sudo apt install exa
 
 # Add fonts
 font_dir="$HOME/.local/share/fonts"

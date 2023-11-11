@@ -24,14 +24,13 @@ export DISPLAY="127.0.0.1:10.0"
 
 # User configuration
 
-alias ls='logo-ls'
-alias sl='logo-ls'
-alias l='logo-ls -lah'
+alias ls="exa --icons --group-directories-first"
+
 alias c=clear
 alias s='source ~/.zshrc'
 alias e=exit
+
 alias a='sh ~/.ssh/gum_ssh.sh'
-alias pager='gum pager < $1 --border double --border-foreground 10 --margin "1 2"'
 
 #creating directories alias
 function take {
