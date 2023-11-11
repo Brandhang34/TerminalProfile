@@ -24,20 +24,6 @@ sudo cp extras/Terminal_Profile/configs/tmux/tmux.conf ~/.config/tmux/
 #Install exa
 sudo apt install exa
 
-# Install ZSH
-sudo apt install -y git-core zsh curl
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-# Install plug-ins (you can git-pull to update them later).
-(cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-syntax-highlighting)
-(cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-autosuggestions)
-
-# Replace the configs with the saved one.
-sudo cp extras/Terminal_Profile/configs/.zshrc ~/
-
-# Switch the shell.
-chsh -s $(which zsh)
-
 # Install Starship
 curl -sS https://starship.rs/install.sh | sh
 sudo cp extras/Terminal_Profile/configs/starship.toml ~/.config
@@ -61,3 +47,16 @@ sudo apt install ripgrep # live grep
 # Copy NeoVim Configurations
 mkdir -p ~/.config/nvim
 cp -r extras/nvim/* ~/.config/nvim
+
+# Install ZSH
+sudo apt install -y git-core zsh curl
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Install plug-ins (you can git-pull to update them later).
+(cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-syntax-highlighting)
+(cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-autosuggestions)
+
+# Replace the configs with the saved one.
+sudo cp extras/Terminal_Profile/configs/.zshrc ~/
+
+chsh -s $(which zsh)
