@@ -1,0 +1,276 @@
+format = """
+[](fg:bar_one)\
+$os\
+[](fg:bar_one bg:bar_three)\
+$username\
+[](fg:bar_three bg:bar_four)\
+$aws\
+[ ](fg:bar_four)\
+$fill\
+[ \uE0B2](fg:bar_four)\
+[\uE0B2](fg:bar_three bg:bar_four)\
+$c\
+$dart\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$lua\
+$nodejs\
+$nim\
+$php\
+$python\
+$rlang\
+$ruby\
+$rust\
+$scala\
+$docker_context\
+$terraform\
+[](fg:bar_two bg:bar_three)\
+[\uE0B2](fg:bar_two bg:bar_three)\
+$custom$directory\
+[\uE0B0](fg:bar_two bg:bar_three)\
+[](fg:bar_two bg:bar_three)\
+$git_branch\
+$git_status\
+[\uE0B0](fg:bar_three bg:bar_four)\
+[\uE0B0 ](fg:bar_four)\
+$fill\
+[ ](fg:bar_four)\
+[](fg:bar_three bg:bar_four)\
+$cmd_duration\
+[](fg:bar_one bg:bar_three)\
+$time\
+[](fg:bar_one)\
+"""
+
+# right_format = """
+# [\uE0B2](fg:bar_three)\
+# $time\
+# """
+
+palette = 'theme'
+
+# Defines the colour palette for the theme
+[palettes.theme]
+bar_one = '#81a1c1'
+# bar_two = '#6992D7'
+bar_two = '#5e81ac'
+bar_three = '#394260'
+bar_four = '#212736'
+bar_five = '#1D2230'
+text_one = '#090C0C'
+text_two = '#EEEEEE'
+text_three = '#A3AED2'
+
+[fill]
+symbol = '-'
+style = 'bar_one'
+
+[cmd_duration]
+min_time=0
+format = '[ $duration ](fg:text_two bg:bar_three)'
+
+[username]
+format = '[  $user](fg:text_two bg:bar_three)'
+disabled = false
+show_always = true
+
+[aws]
+format = '[ 󰅟 ($profile )(\($region\))](fg:text_three bg:bar_four)'
+[aws.region_aliases]
+us-west-1 = 'CA'
+us-west-2 = 'OR'
+us-east-1 = 'OH'
+us-east-2 = 'VA'
+eu-west-1 = 'IR'
+[aws.profile_aliases]
+default = 'Sushamae'
+PortfolioWebsite = 'Portfolio'
+
+[os]
+style = 'bg:bar_one fg:text_one'
+format = '[$symbol]($style)'
+disabled = false
+
+[os.symbols]
+Alpine = ''
+Amazon = ''
+Android = ''
+Arch = '󰣇'
+CentOS = ''
+Debian = ''
+DragonFly = ''
+Emscripten = ''
+EndeavourOS = ''
+Fedora = ''
+FreeBSD = ''
+Garuda = '﯑'
+Gentoo = ''
+HardenedBSD = 'ﲊ'
+Illumos = ''
+Linux = "\uE712"
+Macos = "\uE711"
+Manjaro = ''
+Mariner = ''
+MidnightBSD = ''
+Mint = ''
+NetBSD = ''
+NixOS = ''
+OpenBSD = ''
+openSUSE = ''
+OracleLinux = ''
+Pop = ''
+Raspbian = ''
+Redhat = "\uE7BB"
+RedHatEnterprise = "\uE7BB"
+Redox = ''
+Solus = 'ﴱ'
+SUSE = ''
+Ubuntu = ''
+Unknown = ''
+Windows = ''
+
+[directory]
+read_only = " "
+truncation_length = 1
+truncation_symbol = '…/'
+truncate_to_repo = false
+fish_style_pwd_dir_length = 1
+style = 'bold fg:text_two bg:bar_two'
+format = '[ $path$read_only ]($style)'
+
+[custom.home]
+when = ''' test '$HOME' = '$PWD' '''
+style = 'bold fg:text_two bg:bar_two'
+symbol = ' '
+
+[custom.folder]
+when = ''' test '$HOME' != '$PWD' '''
+style = 'bold fg:text_two bg:bar_two'
+symbol = '  '
+
+[directory.substitutions]
+'Documents' = ''
+'Downloads' = ' '
+'Music' = ' '
+'Pictures' = ' '
+
+[git_branch]
+symbol = ' '
+style = 'fg:text_three bg:bar_three'
+format = '[$symbol $branch]($style)'
+
+[git_status]
+style = 'fg:text_three bg:bar_three'
+format = '[$all_status$ahead_behind ]($style)'
+
+[c]
+symbol = ' '
+style = 'fg:text_three bg:bar_three'
+format = '[$symbol ($version) ]($style)'
+
+[dart]
+symbol = ' '
+style = 'fg:text_three bg:bar_three'
+format = '[$symbol ($version) ]($style)'
+
+[elixir]
+symbol = ' '
+style = 'fg:text_three bg:bar_three'
+format = '[$symbol ($version) ]($style)'
+
+[elm]
+symbol = ' '
+style = 'fg:text_three bg:bar_three'
+format = '[$symbol ($version) ]($style)'
+
+[golang]
+symbol = ' '
+style = 'fg:text_three bg:bar_three'
+format = '[$symbol ($version) ]($style)'
+
+[haskell]
+symbol = ' '
+style = 'fg:text_three bg:bar_three'
+format = '[$symbol ($version) ]($style)'
+
+[java]
+symbol = ' '
+style = 'fg:text_three bg:bar_three'
+format = '[$symbol ($version) ]($style)'
+
+[julia]
+symbol = ' '
+style = 'fg:text_three bg:bar_three'
+format = '[$symbol ($version) ]($style)'
+
+[lua]
+symbol = ' '
+style = 'fg:text_three bg:bar_three'
+format = '[$symbol ($version) ]($style)'
+
+[nodejs]
+symbol = ' '
+style = 'fg:text_three bg:bar_three'
+format = '[$symbol ($version) ]($style)'
+
+[nim]
+symbol = ' '
+style = 'fg:text_three bg:bar_three'
+format = '[$symbol ($version) ]($style)'
+
+[php]
+symbol = ' '
+style = 'fg:text_three bg:bar_three'
+format = '[$symbol ($version) ]($style)'
+
+[python]
+symbol = ' '
+style = 'fg:text_three bg:bar_three'
+format = '[$symbol ($version) ]($style)'
+
+[rlang]
+symbol = 'ﳒ '
+style = 'fg:text_three bg:bar_three'
+format = '[$symbol ($version) ]($style)'
+
+[ruby]
+symbol = ' '
+style = 'fg:text_three bg:bar_three'
+format = '[$symbol ($version) ]($style)'
+
+[rust]
+symbol = ' '
+style = 'fg:text_three bg:bar_three'
+format = '[$symbol ($version) ]($style)'
+
+[scala]
+symbol = ' '
+style = 'fg:text_three bg:bar_three'
+format = '[$symbol ($version) ]($style)'
+
+[docker_context]
+symbol = '󰡨 '
+style = 'fg:text_three bg:bar_three'
+format = '[$symbol ($version) ]($style)'
+[terraform]
+symbol = '󱁢 '
+style = 'fg:text_three bg:bar_three'
+format = '[$symbol ($version) ]($style)'
+
+[kubernetes]
+symbol = '󱃾 '
+style = 'fg:text_three bg:bar_three'
+format = '[$symbol ($version) ]($style)'
+
+
+
+[time]
+disabled = false
+time_format = '%R' # Hour:Minute Format
+style = 'fg:text_one bg:bar_one'
+format = '[ $time]($style)'
+
