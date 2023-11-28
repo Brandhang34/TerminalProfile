@@ -30,9 +30,6 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 # Replace the configs with the saved one.
 sudo cp extras/Terminal_Profile/configs/.zshrc ~/
 
-# Switch the shell.
-chsh -s $(which zsh)
-
 # Install Starship
 curl -sS https://starship.rs/install.sh | sh
 sudo cp extras/Terminal_Profile/configs/macos/starship.toml ~/.config
@@ -42,3 +39,6 @@ brew install neovim
 
 mkdir -p ~/.config/nvim
 cp -r extras/nvim/* ~/.config/nvim
+
+# Switch the shell.
+chsh -s $(which zsh)
