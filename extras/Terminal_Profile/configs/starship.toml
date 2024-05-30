@@ -47,11 +47,6 @@ $time\
 \n [╰─ $character](fg:bar_one)
 """
 
-# right_format = """
-# [\uE0B2](fg:bar_three)\
-# $time\
-# """
-
 palette = 'theme'
 
 # Defines the colour palette for the theme
@@ -71,7 +66,7 @@ symbol = '-'
 style = 'bar_one'
 
 [cmd_duration]
-min_time=0
+min_time = 0
 format = '[ $duration ](fg:text_two bg:bar_three)'
 
 [username]
@@ -268,10 +263,8 @@ style = 'fg:text_three bg:bar_three'
 format = '[$symbol ($version) ]($style)'
 
 
-
 [time]
 disabled = false
-time_format = '%R' # Hour:Minute Format
+time_format = '%R'               # Hour:Minute Format
 style = 'fg:text_one bg:bar_one'
 format = '[ $time]($style)'
-

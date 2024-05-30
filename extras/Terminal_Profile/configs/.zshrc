@@ -1,12 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-ZSH_THEME="robbyrussell"
-
-
 # Plugins
 plugins=(
   git
@@ -14,17 +5,27 @@ plugins=(
   zsh-autosuggestions
 )
 
-source $ZSH/oh-my-zsh.sh
+source $HOME/.oh-my-zsh/oh-my-zsh.sh
 
 eval "$(starship init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 # Exports
 export TERM=xterm-256color
-export DISPLAY="127.0.0.1:10.0"
 
 # User configuration
+alias ls='exa --icons --classify --color=always --group-directories-first'
+alias ll='exa -alF --icons --classify --color=always --group-directories-first'
+alias la='exa -a --icons classify --color=always --group-directories-first'
+alias l='exa -F --icons --classify --color=always --group-directories-first'
+alias l.='exa -a | egrep "^\."'
 
-alias ls="exa --icons --group-directories-first"
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+
+alias cat='bat'
+alias copy='pbcopy'
 
 alias c=clear
 alias s='source ~/.zshrc'
@@ -38,6 +39,4 @@ function take {
   cd $1
 }
 
-
-# Alias for SSH
-[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}  14
